@@ -8,10 +8,22 @@ A Django REST Framework API that returns profile information with dynamic cat fa
 - Dynamic cat facts from external API
 - Proper error handling and fallbacks
 - UTC timestamp in ISO 8601 format
+- Comprehensive test suite
 
-## Setup Instructions
+## API Endpoint
 
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd profile-api
+### GET /me
+Returns profile information with a dynamic cat fact.
+
+**Response:**
+```json
+{
+  "status": "success",
+  "user": {
+    "email": "adewumijosephine1@gmail.com",
+    "name": "Adewumi Josephine",
+    "stack": "Python/Django/DRF"
+  },
+  "timestamp": "2024-01-15T10:30:00.123Z",
+  "fact": "Cats can jump up to 6 times their height."
+}
